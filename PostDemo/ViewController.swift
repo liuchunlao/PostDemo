@@ -14,6 +14,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func postAction(_ sender: Any) {
+        
+        let sb = UIStoryboard.init(name: "PDComposeVC", bundle: nil)
+        let vc = sb.instantiateInitialViewController()!
+        present(vc, animated: true)
+    }
+    
 }
 
