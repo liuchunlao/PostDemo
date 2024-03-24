@@ -23,6 +23,11 @@ class PDPicSelectVC: UICollectionViewController {
     }
     
     @objc func addPicNoti(_ noti: Notification) {
+        let obj = noti.object as! PDPicSelectItemCell
+        if obj.image != nil {
+            // 已设置图片
+           return
+        }
         let vc = UIImagePickerController.init()
         vc.modalPresentationStyle = .fullScreen
         vc.sourceType = .savedPhotosAlbum
@@ -31,13 +36,9 @@ class PDPicSelectVC: UICollectionViewController {
     }
     
     @objc func delPicNoti(_ noti: Notification) {
-        let obj = noti.object as? PDPicSelectItemCell
-        
-        if obj != nil {
-            let cell = obj!
-            let path = collectionView.indexPath(for: cell)
-            imgList.remove(at: path!.item)
-            
+        let obj = noti.object as! PDPicSelectItemCell
+        if let path = collectionView.indexPath(for: obj) {
+            imgList.remove(at: path.item)
             collectionView.reloadData()
         }
         
