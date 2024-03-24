@@ -16,6 +16,10 @@ class PDComposeVC: UIViewController {
     @IBOutlet weak var btnSend: UIBarButtonItem!
     @IBOutlet weak var txtV: UITextView!
     @IBOutlet weak var btmConsToolbar: NSLayoutConstraint!
+    
+    
+    var picSelVC: PDPicSelectVC?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,8 +35,13 @@ class PDComposeVC: UIViewController {
     
     func setupUI() {
         txtV.addSubview(phLabel)
-        
         heightConsPicContainer.constant = 0
+        
+        for vc in children {
+            if vc is PDPicSelectVC {
+                picSelVC = vc as? PDPicSelectVC
+            }
+        }
         
     }
     
@@ -127,7 +136,11 @@ extension PDComposeVC: UITextViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        txtV.becomeFirstResponder()
+        
+        if picSelVC?.imgList.count == 0 {
+            // 没有图片时再弹出键盘
+            txtV.becomeFirstResponder()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

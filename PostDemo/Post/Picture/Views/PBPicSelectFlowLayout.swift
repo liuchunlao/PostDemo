@@ -15,12 +15,16 @@ class PBPicSelectFlowLayout: UICollectionViewFlowLayout {
         
         let ksw = UIScreen.main.bounds.size.width
 //        let ksh = UIScreen.main.bounds.size.height
-        let itemW = (ksw - 20) / 3
+        
+        let marginL = 10.0
+        let marginH = 10.0
+        let col = 3.0
+        let itemW = (ksw - 2 * marginL - (col - 1) * marginH) / col
         let itemH = itemW
         itemSize = .init(width: itemW, height: itemH)
         
-        minimumLineSpacing = 10
-        minimumInteritemSpacing = 10
-        sectionInset = .init(top: 10, left: 10, bottom: 10, right: 10)
+        minimumLineSpacing = marginH
+        minimumInteritemSpacing = marginH
+        sectionInset = .init(top: marginL, left: marginL, bottom: marginL, right: marginL)
     }
 }
