@@ -20,7 +20,13 @@ class PDPicSelectItemCell: UICollectionViewCell {
     
     var image: UIImage? {
         didSet {
-            btnAdd.setImage(image, for: .normal)
+            if image == nil {
+                btnDel.isHidden = true
+                btnAdd.setImage(.init(named: "compose_pic_big_add"), for: .normal)
+            } else {
+                btnDel.isHidden = false
+                btnAdd.setImage(image, for: .normal)
+            }
         }
         
     }
@@ -32,12 +38,12 @@ class PDPicSelectItemCell: UICollectionViewCell {
     
     // 移除
     @IBAction func deleteBtnClick() {
-        notiCenter.post(name: pic_del_noti, object: nil)
+        notiCenter.post(name: pic_del_noti, object: self)
     }
     
     // 添加
     @IBAction func addBtnClick() {
-        notiCenter.post(name: pic_add_noti, object: nil)
+        notiCenter.post(name: pic_add_noti, object: self)
     }
     
 }

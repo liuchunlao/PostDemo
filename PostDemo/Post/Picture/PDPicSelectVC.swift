@@ -31,6 +31,15 @@ class PDPicSelectVC: UICollectionViewController {
     }
     
     @objc func delPicNoti(_ noti: Notification) {
+        let obj = noti.object as? PDPicSelectItemCell
+        
+        if obj != nil {
+            let cell = obj!
+            let path = collectionView.indexPath(for: cell)
+            imgList.remove(at: path!.item)
+            
+            collectionView.reloadData()
+        }
         
     }
     
