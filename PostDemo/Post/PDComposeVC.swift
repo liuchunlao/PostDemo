@@ -10,6 +10,9 @@ import UIKit
 class PDComposeVC: UIViewController {
     let maxTextCount = 10
     
+    @IBOutlet weak var picContainer: UIView!
+    @IBOutlet weak var heightConsPicContainer: NSLayoutConstraint!
+    
     @IBOutlet weak var btnSend: UIBarButtonItem!
     @IBOutlet weak var txtV: UITextView!
     @IBOutlet weak var btmConsToolbar: NSLayoutConstraint!
@@ -20,9 +23,16 @@ class PDComposeVC: UIViewController {
         setupUI()
     }
     
+    @IBAction func btnPicAction() {
+        heightConsPicContainer.constant = UIScreen.main.bounds.size.height / 3
+        txtV.resignFirstResponder()
+    }
+    
+    
     func setupUI() {
         txtV.addSubview(phLabel)
         
+        heightConsPicContainer.constant = 0
         
     }
     

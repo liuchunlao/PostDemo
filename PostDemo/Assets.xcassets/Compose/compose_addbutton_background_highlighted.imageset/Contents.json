@@ -1,9 +1,9 @@
 {
   "images" : [
     {
-      "filename" : "compose_addbutton_background_highlighted.png",
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "compose_addbutton_background_highlighted.png"
     },
     {
       "idiom" : "universal",
@@ -15,7 +15,7 @@
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }

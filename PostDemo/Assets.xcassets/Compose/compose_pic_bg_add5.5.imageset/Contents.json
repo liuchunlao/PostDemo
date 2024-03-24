@@ -9,13 +9,13 @@
       "scale" : "2x"
     },
     {
-      "filename" : "compose_pic_bg_add5.5@3x.png",
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "compose_pic_bg_add5.5@3x.png"
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }

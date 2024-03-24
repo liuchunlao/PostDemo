@@ -1,9 +1,9 @@
 {
   "images" : [
     {
-      "filename" : "compose_toolbar_picture@3x.png.png",
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "compose_toolbar_picture@3x.png.png"
     },
     {
       "idiom" : "universal",
@@ -15,7 +15,7 @@
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }
