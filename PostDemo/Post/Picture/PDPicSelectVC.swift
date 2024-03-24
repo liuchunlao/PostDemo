@@ -57,7 +57,7 @@ extension PDPicSelectVC: UIImagePickerControllerDelegate, UINavigationController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let img = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        imgList.append(img)
+        imgList.append(img.scaleImage(width: 220))
         collectionView.reloadData()
         picker.dismiss(animated: true)
     }

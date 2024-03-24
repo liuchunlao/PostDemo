@@ -17,6 +17,7 @@
 		EB24C89B2BAF29C80008C0E2 /* PDComposeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24C89A2BAF29C80008C0E2 /* PDComposeVC.storyboard */; };
 		EB24C89E2BAFD4B20008C0E2 /* PDPicSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24C89D2BAFD4B20008C0E2 /* PDPicSelectVC.swift */; };
 		EB24C8A12BAFD5830008C0E2 /* PDPicSelectItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24C8A02BAFD5830008C0E2 /* PDPicSelectItemCell.swift */; };
+		EB44C3342BAFEE58004DD71C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44C3332BAFEE58004DD71C /* UIImage+Extension.swift */; };
 		EB4517832BAFD91F009B330F /* PBPicSelectFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4517822BAFD91F009B330F /* PBPicSelectFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		EB24C89A2BAF29C80008C0E2 /* PDComposeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PDComposeVC.storyboard; sourceTree = "<group>"; };
 		EB24C89D2BAFD4B20008C0E2 /* PDPicSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDPicSelectVC.swift; sourceTree = "<group>"; };
 		EB24C8A02BAFD5830008C0E2 /* PDPicSelectItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDPicSelectItemCell.swift; sourceTree = "<group>"; };
+		EB44C3332BAFEE58004DD71C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		EB4517822BAFD91F009B330F /* PBPicSelectFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBPicSelectFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 		EB24C8972BAF29860008C0E2 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				EB44C3322BAFEE4C004DD71C /* Tool */,
 				EB24C89C2BAFD48A0008C0E2 /* Picture */,
 				EB24C8982BAF29A80008C0E2 /* PDComposeVC.swift */,
 				EB24C89A2BAF29C80008C0E2 /* PDComposeVC.storyboard */,
@@ -104,6 +107,14 @@
 				EB4517822BAFD91F009B330F /* PBPicSelectFlowLayout.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EB44C3322BAFEE4C004DD71C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				EB44C3332BAFEE58004DD71C /* UIImage+Extension.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 				EB4517832BAFD91F009B330F /* PBPicSelectFlowLayout.swift in Sources */,
 				EB24C89E2BAFD4B20008C0E2 /* PDPicSelectVC.swift in Sources */,
 				EB24C8882BAF29800008C0E2 /* ViewController.swift in Sources */,
+				EB44C3342BAFEE58004DD71C /* UIImage+Extension.swift in Sources */,
 				EB24C8842BAF29800008C0E2 /* AppDelegate.swift in Sources */,
 				EB24C8862BAF29800008C0E2 /* SceneDelegate.swift in Sources */,
 				EB24C8992BAF29A80008C0E2 /* PDComposeVC.swift in Sources */,
